@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyInteractiveWeSite</title>
+    <link rel="Stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header id="begin">
+        <h1>My Interactive Web Site</h1>
+        <p>Learning HTML, CSS and some JavaScript</p>
+    </header>
+
+    <nav>
+        <a href="#begin">Begin</a>
+        <a href="#aboutme">About me</a>
+        <a href="#table">Table</a>
+        <a href="#list">List</a>
+        <a href="#javascript">JavaScript</a>
+    </nav>
+
+    <div class="carousel">
+        <img src="img1.jpg" alt="spaceimage" id="carouselImage">
+        <div class="carouselText">
+            <h2 id="carouselTitle">
+                Discover the space.
+            </h2>
+            <p id="descriptionCarousel">Find new planets and learn about them.</p>
+            <button onclick="">
+                Explore!
+            </button>
+        </div>
+        <button class="sign brow" onclick="changeImage(-1)">
+            &#10094;
+        </button>
+
+        <button class="sign arow" onclick="changeImage(1)">
+            &#10095;
+        </button>
+    </div>
+
+    <section id="aboutme">
+        <h2>About me</h2>
+        <div class="cardsContainer">
+            <div class="cards">
+                <h3>¿Who am I?</h3>
+                <p>I am a person who likes to play the guitar and make practices for my job.</p>
+
+                <p>Now i'm teaching 4B how to do a web site with html </p>
+            </div>
+            <div class="cards">
+                <h3>
+                    My skills:
+                </h3>
+                <p>HTML: for the structure</p>
+                <p>CSS: for the styles of the page</p>
+                <p>JS: To give interaction on the page with the user</p>
+            </div>
+            <div class="cards">
+                <h3>My objective</h3>
+                <p>Learn how to make web pages using database, backend and FrontEnd</p>
+                <button onclick="showMessage()">
+                    Find more!
+                </button>
+                <p id="message"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="table">
+        <h2>Students Table</h2>
+        <p>Information used for example. Filled with rows and columns</p>
+        <div class="tableContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Major</th>
+                        <th>Subject</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Aaron</td>
+                        <td>Graphic Design</td>
+                        <td>Art</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Daniel</td>
+                        <td>Veterinary</td>
+                        <td>Anatomy of Animals</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Rafael</td>
+                        <td>Architecture</td>
+                        <td>Blocks 2</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Abraham</td>
+                        <td>Networking</td>
+                        <td>Cisco Academy</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="list">
+        <h2>List of Examples</h2>
+        <div class="cardsContainer">
+            <div class="cards">
+                <h3>Languajes and Technologies</h3>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>CSS</li>
+                    <li>Java</li>
+                    <li>SQL Server</li>
+                    <li>C#</li>
+                </ul>
+            </div>
+            <div class="cards">
+                <h3>Steps to make a web page</h3>
+                <ol>
+                    <li>Create an HTML File</li>
+                    <li>Create an CSS File</li>
+                    <li>Create an Javascript file</li>
+                    <li>Make the HTML structure</li>
+                    <li>Give the styles with CSS</li>
+                    <li>Inyect the funcionalities with javascript</li>
+                    <li>Test our web page in our browser</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Planets Galery</h2>
+        <div class="galery">
+            <img src="planeta1.jpg" alt="first image">
+            <img src="planeta2.jpg" alt="second image">
+            <img src="planeta3.webp" alt="third image">
+            <img src="planeta4.jpg" alt="fourth image">
+            <img src="planeta5.webp" alt="fifth image">
+            <img src="planeta6.webp" alt="sixth image">
+        </div>
+    </section>
+
+    <section id="javascript">
+        <h2>JavaScript Laboratory</h2>
+        <div class="cardsContainer">
+            <div class="cards">
+                <h3>1. Counter</h3>
+                <p>Actual Value
+                    <span id="counter">0</span>
+                </p>
+                <button onclick="increase()">Increase</button>
+                <button onclick="decrease()">Decrease</button>
+                <button onclick="restart()">Restart</button>
+
+            </div>
+
+            <div class="cards">
+                <h3>2. Change Color</h3>
+                <div id="colorBox" class="boxColor">
+                    Change my color
+                </div>
+                <button onclick="changeColor()">Try me!</button>
+            </div>
+            <div class="cards">
+                <h3>Dynamic list</h3>
+                <p>Write a planet that you know</p>
+                <input type="text" id="newPlanet" placeholder="Ex... Venus">
+                <button onclick="addElement()"> Add Planet!</button>
+
+                <ul id="dynamicList">
+                    <li>Mercury</li>
+                    <li>Saturn</li>
+
+                </ul>
+
+            </div>
+            <div class="cards">
+                <h3>4. Simple Calculator</h3>
+                <p>Multiply two numbers</p>
+
+                <label for="numberOne">First Number:</label>
+                <input type="number" id="numberOne" value="2">
+
+
+                 <label for="numberTwo">Second Number:</label>
+                <input type="number" id="numberTwo" value="10">
+
+                <button onclick="simpleCalc()">Calculate...</button>
+                <p id="result">Result: 20</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Web Site Interactive | HTML, CSS & Javascript</p>
+        <p>Made by </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
